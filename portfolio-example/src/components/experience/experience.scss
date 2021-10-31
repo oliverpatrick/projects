@@ -1,0 +1,77 @@
+@import '../../utils.scss';
+
+.experience{
+
+  #title{
+    width: fit-content;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 50px;
+    font-weight: 600;
+    z-index: 1;
+  }
+
+  #description{
+    position: relative;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -12%);
+    width: 87%;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--gray2);
+    transition: color 0.5s linear;
+  }
+
+  .timeline {
+    position: absolute;
+    left: 50vw;
+    top: vh(157);
+    position: relative;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    
+    width: 87%;
+    height: 0;
+  }
+
+
+  $tabletBreakpoint: 991px;
+
+  @media (max-width: $tabletBreakpoint) {
+    
+    #title{
+      position: relative;
+      top: 7%;
+      font-size: 34px;
+    }
+
+    #description{
+      position: relative;
+      top: 8%;
+      text-justify: inter-word;
+      text-align: justify;
+      font-size: 14px;
+
+      p{
+        margin-top: 10px;
+      }
+    }
+
+    .timeline {
+      position: relative;
+      left: 50%;
+      top: 9%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: vh(90);
+      margin-bottom: vh(20);
+      background-color: red;
+    }
+  }
+
+}

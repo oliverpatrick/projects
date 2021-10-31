@@ -1,0 +1,151 @@
+@import '../../utils.scss';
+
+.contact{
+
+  .form-wrapper{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    
+    #title{
+      width: fit-content;
+      font-size: 50px;
+      font-weight: 600;
+    }
+
+    #description{
+      width: 70%;
+      font-size: 19px;
+      font-weight: 400;
+      text-align: center;
+      transition: color 0.5s linear;
+      color: var(--gray2);
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+
+    form{
+      width: 70%;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      
+
+      > * {
+        background-color: var(--gray4);
+        color: var(--gray2);
+        transition: background-color 0.5s linear, color 0.5s linear;
+      }
+
+      input{
+        width: 310px;
+        height: 30px;
+        font-size: 14px;
+        border: none;
+        padding-left: 10px;
+        border-radius: 5px;
+      }
+
+      textarea{
+        width: 310px;
+        height: 200px;
+        font-size: 14px;
+        border: none;
+        padding-left: 10px;
+        padding-top: 10px;
+        border-radius: 5px;
+      }
+
+      button{
+        width: 150px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #footer{
+    position: absolute;
+    z-index: 0;
+    bottom: 10px;
+    font-size: 14px;
+    padding-bottom: 3px;
+    width: 100%;
+    text-align: center;
+  }
+
+  $phoneBreakpoint: 481px;
+
+  @media (max-width: $phoneBreakpoint) {
+    .socials{
+      position: absolute;
+      top: 18px;
+      width: 100%;
+    }
+  }
+
+  $tabletBreakpoint: 991px;
+
+  @media (max-width: $tabletBreakpoint) {
+
+    .form-wrapper{
+
+      #title{
+        font-size: 34px;
+      }
+
+      #description{
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--gray2);
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      form{
+        
+        height: 60%;
+        justify-content: center;
+
+        > *{
+          margin: 10px 10px;
+        }
+        
+        input{
+          width: 90%;
+        }
+
+        textarea{
+          width: 90%;
+          height: 20%;
+        }
+      }
+    }
+
+    .socials{
+      position: absolute;
+      bottom: vh(5);
+      width: 100%;
+    }
+
+    #footer{
+      font-size: 12px;
+      bottom: vh(1);
+      left: 350%;
+      transform: translateX(-50%);
+    }
+
+
+  }
+}
